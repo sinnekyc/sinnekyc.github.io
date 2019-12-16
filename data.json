@@ -1,16 +1,16 @@
 {
-    "method":[
+    "project":[
         {
-            "list":"1.",
-            "link":"LinkedIn Link"
+            "name":"project name1",
+            "method":"ux research"
         },
         {
-            "list":"2.",
-            "link":"Email Link"
+            "name":"project name2",
+            "method":"concept"
         },
         {
-            "list":"3.",
-            "link":"Instagarm Link"
+            "name":"project name3",
+            "method":"ux research"
         }
 
     ]

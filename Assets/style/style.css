@@ -1,234 +1,369 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-body{
-    font-family: "futura", sans-serif; 
-    background-color: whitesmoke;
-    font-weight: 500;
-    padding: 0;
-    margin: 0;
-
+body {
+  font-family: "futura", sans-serif;
+  background-color: whitesmoke;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
 }
 
-body, a{
-    margin: 0;
+body,
+a {
+  margin: 0;
 }
 
-.clear{
-    clear: both;
+.clear {
+  clear: both;
 }
 
 /* fixed header */
-header{
-    position:fixed;
-    z-index: 10;
-    background-color:transparent;
-    top: 0;
-	right: 0;
-    width:100%;
-    height: 10vh;
+header {
+  position: fixed;
+  z-index: 10;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 59px;
 }
-
-footer{
-
-    clear: both;
-    z-index:10;
-    background-color:black;
-    margin-top: 120px;
-    margin-bottom: 0px;
-    width:100%;
-    height:200px;
-
-}
-
 
 /* navigator */
-#logo{
-    text-align: center;
-    float: left;
-    margin-left: 22px;
-    left: 0px;
-    padding: 8px 20px;
+#logo {
+  text-align: center;
+  float: left;
+  margin-left: 22px;
+  left: 0px;
+  padding: 8px 20px;
 }
 
-.aboutme{
-    text-align: center;
-    float: right;
-    margin: 8px;
-    margin-right: 30px;
-    padding: 10px 18px;
-    border: 1px solid lightgray;
+#logo:hover {
+  filter: drop-shadow(1px 1px 4px lightgray);
 }
 
-
-#myIntro{
-    width: 0;
-    height: 60vh;
-    z-index: 100;
-    background-color: black;
-    opacity: 0.8;
-    display: block;
-    position: fixed;
-    text-align: center;
-    /* transition: left 1s; */
-    overflow-x: hidden;
+.aboutme {
+  text-align: center;
+  color: whitesmoke;
+  float: right;
+  margin: 8px;
+  margin-right: 30px;
+  padding: 10px 18px;
 }
 
-#myIntro.openMe{
-    margin: 10%;
-    width: 80vw;
+.aboutme:hover {
+  background-color: lightgray;
+  color: whitesmoke;
 }
 
-#closeIcon{
-    position: absolute;
-    right: 15px;
-    font-size: 50px;
-	margin-left: 30px;
-	text-decoration: none;
-	color: whitesmoke;
-	display: block;
-	font-family: Arial;
-	}
+#aboutme-intro {
+  font-size: 120%;
+  text-align: center;
+  color: whitesmoke;
+  margin: 8px;
+  margin-right: 30px;
+  padding: 10px 18px;
+}
 
+#myIntro {
+  width: 0;
+  height: 60vh;
+  z-index: 100;
+  background-color: gray;
+  opacity: 0.95;
+  display: block;
+  position: fixed;
+  text-align: center;
+  /* transition: left 1s; */
+  overflow-x: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
+#myIntro.openMe {
+  margin: 10%;
+  width: 60vw;
+  margin-left: 20vw;
+}
 
-	
+#closeIcon {
+  position: absolute;
+  right: 15px;
+  font-size: 50px;
+  margin-left: 30px;
+  text-decoration: none;
+  color: whitesmoke;
+  display: block;
+  font-family: Arial;
+}
 
-/* container */
+/* resume link */
+#resume-button {
+  background-color: whitesmoke;
+  color: black;
+  border: 2px solid #555555;
+  display: inline-block;
+  margin: 2px 2px;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#resume-button:hover {
+  background-color: grey;
+  color: whitesmoke;
+}
+
+#vantajs {
+  z-index: -5;
+  width: auto;
+  height: 100vh;
+  /* margin-bottom: 10px; */
+}
+
+/* container
 section {
-    position: relative;
-    top:8vh;
-}
+  position: relative;
+  top: 8vh;
+} */
+
+/* canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98vh;
+} */
 
 /* homepage */
-#name{
-    position: absolute;
-	width: 80vw;
-	margin-left: 10vw;
-    margin-right: 10vw;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 20vh;
-    font-size: 4em;
+#name {
+  position: absolute;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 4em;
+  color: aliceblue;
 }
 
 /* how could I put the text on the center? */
-#profile{
-    position: absolute;
-    width: 80vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    text-align: center;
-    padding-top: 45vh;
+#profile {
+  position: absolute;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: center;
+  padding-top: 45vh;
+  color: aliceblue;
 }
 
-#brief{
-    font-size: 1.5em;
+#brief {
+  font-size: 1.5em;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
-.homepage{
-    background-color: whitesmoke;
-    margin: 0 auto;
-    widows: 100vw;
-    height:100vh;
-}
-
-/* portfolio */
-.portfolio{
-    background-color: whitesmoke;
-    display: block;
-    padding-top: 5%;
-    padding-bottom: 8%;
-    margin: 0 auto;
-    width:100%;
-    height:auto;
-    text-align: center;
-    z-index: 5;
-}
-
-/* portfolio nav */
-#portfolio-sort{ 
-    text-align: center;
-    padding-bottom: 5px;
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 1em;
-}
-
-#portfolio-sort a{
-    text-decoration:none;
-    color: black;
-    display: inline-block;
-    padding: 2px 20px;
-
+.homepage {
+  margin: 0 auto;
+  widows: 100vw;
+  height: 100vh;
 }
 
 /* gallery // how can I move those items to center? */
-section .items{
-    width: 98%;
-    height: 80vw;
-    margin: 1%;
-	float: left;
-	text-align: center
+section .items {
+  width: 98%;
+  height: 80vw;
+  margin: 1%;
+  float: left;
+  text-align: center;
 }
 
 /* left and right has certain space, squeeze the container to the center */
-.items-container{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 80vw;
-    height: auto; 
-  
+.items-container {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  height: auto;
+  flex-grow: 2;
+  cursor: pointer;
 }
 
-#text{
-    color: #DA4453;
+.items-container li {
+  display: inline;
+  list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
 
-/* use the example in class */
-#item1 {background: #37BC9B;}
-#item2 {background: #DA4453;}
-#item3 {background: #F6BB42;}
-#item4 {background: #3BAFDA;}
-#item5 {background: #4A89DC;}
-#item6 {background: #E9573F;}
+.title {
+  float: left;
+  margin-top: 4%;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8em;
+  padding-left: 5%;
+}
 
+.subtitle {
+  font-size: 1em;
+  color: whitesmoke;
+  font-weight: 400;
+  padding-left: 1%;
+  margin-top: 3%;
+}
+
+.items:hover {
+  transform: scale(1.01);
+  opacity: 0.7;
+  font-size: 150%;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* cannot link local image?? */
+.items:nth-of-type(1) {
+  background-image: url(../../Assets/img/project1/strangers.JPG);
+  background-size: cover;
+}
+
+.items:nth-of-type(2) {
+  background-image: url("https://thumbs.gfycat.com/RevolvingKaleidoscopicHeterodontosaurus-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.items:nth-of-type(3) {
+  background-image: url("https://thumbs.gfycat.com/RevolvingKaleidoscopicHeterodontosaurus-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.items:nth-of-type(4) {
+  background-image: url("https://thumbs.gfycat.com/RevolvingKaleidoscopicHeterodontosaurus-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.items:nth-of-type(5) {
+  background-image: url("https://thumbs.gfycat.com/RevolvingKaleidoscopicHeterodontosaurus-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.items:nth-of-type(6) {
+  background-image: url("https://thumbs.gfycat.com/RevolvingKaleidoscopicHeterodontosaurus-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* portfolio */
+
+/* footer */
+footer {
+  clear: both;
+  z-index: 1;
+  background-color: black;
+  margin-top: 120px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 200px;
+}
+
+/* <!-- reference: http://architkaushik.com --> */
+#footerline {
+  border-top: 0.8px solid grey;
+  margin: 0 2%;
+  text-align: center;
+  position: relative;
+  height: 200px;
+}
+
+.copyrights {
+  font-size: 12px;
+  color: #545456;
+}
+
+#footerline ul li {
+  /* margin: 20px; */
+  display: inline-block;
+  padding: 10px;
+  margin: 0 10px;
+  /* border: 0.5px solid #1b1b1b; */
+  /* border-radius: 5px; */
+}
+
+.clipboard i {
+  padding: 13px;
+  padding-right: 55px;
+  border: 0.5px solid #7a7879;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: "Quattrocento Sans";
+  color: #b3b3b7;
+  /* font-size: 1 */
+}
+
+.clipboard a {
+  font-family: "Quattrocento Sans";
+  color: #b3b3b7;
+}
+
+.clipboard {
+  width: 100%;
+  height: 70px;
+  /* background-color: pink; */
+}
+
+.clipboard p {
+  margin-left: -40px;
+  padding: 13px 15px;
+  display: inline-block;
+  background: #222;
+  border: 0.5px solid #7a7879;
+  border-radius: 5px;
+  color: #b3b3b7;
+}
+
+/* .clipboard p:hover {
+  background: #646466;
+  color: #b3b3b7;
+  cursor: pointer;
+} */
+
+/* footer */
 
 /* media queries */
 
 /* desktop
 alway do a desktop ver. first */
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
-    /* because I have margin for the items, so I need to do math for the width */
-    section .items{
-        width:calc(96%/2);
-        height:calc(80vw/3);
-
-    }
+@media screen and (min-device-width: 1200px) {
+  /* because I have margin for the items, so I need to do math for the width */
+  section .items {
+    width: calc(96% / 2);
+    height: calc(80vw / 3);
+  }
 }
 
-
 /* tablet */
-@media screen and (min-device-width: 700px) and (max-device-width: 1199px) { 
-    section .items{
-        width:calc(96%/2);
-        height:calc(80vw/3);
-
-    }
+@media screen and (min-device-width: 700px) and (max-device-width: 1199px) {
+  section .items {
+    width: calc(96% / 2);
+    height: calc(80vw / 3);
+  }
 }
 
 /* phone */
-@media screen and (max-device-width: 699px) { 
-    section .items{
-        width:calc(96%);
-        height:calc(80vw/1.5);
-    }
+@media screen and (max-device-width: 699px) {
+  section .items {
+    width: calc(96%);
+    height: calc(80vw / 1.5);
+  }
 }
-
-
-
-

@@ -1,92 +1,179 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kennis Chen</title>
-        <link rel="stylesheet" type="text/css" href="Assets/style/style.css">
-       
+  <head>
+    <meta charset="utf-8" />
+    <title>Kennis Chen</title>
+    <link rel="stylesheet" type="text/css" href="Assets/style/style.css"/>
+    <link rel="icon" type="image/gif" href="./Assets/img/logo.png"/>
+    <script
+      type="text/javascript"
+      src="Assets/script/jquery-3.4.1.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/script/script.js"></script>
 
-        
-        <script type="text/javascript" src="Assets/script/jquery-3.4.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="Assets/script/script.js"></script>
-        
-    </head>
 
-    <body>
-        <!-- navigator menu -->
-        <header>
-            <nav class="navbar">
-                    <a id="logo" href="index.html">
-                        <img src="./Assets/img/logo.png" height="45" width="45">
-                    </a>
+    <!-- <script type="text/javascript" src="Assets/script/sketch.js"></script>
+    <script type="text/javascript" src="Assets/script/p5.js"></script>
+    <script type="text/javascript" src="Assets/script/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.7.0/Tone.js"></script> -->
 
-                    <span class="aboutme" style="font-size: 15px; cursor: pointer;" onclick="openMe()">About Me</span>
-
-                    <div id="myIntro" class="introBlock">
-                    <span id="closeIcon" onclick = "closeMe()">&times;</span>
-                    <span id="text">
-                        <div class="json-container"></div>
-                    </span>
-                    </div>
-
-            </nav>
-        </header>
-
-        <section class="homepage">
-            <div id="name">
-                <!-- I wanna make ps.j5 for it, it would has sound & change color when clicked -->
-                <p id="hi">Hey, I'm Kennis!</p>
-            </div>
-
-            <div id="profile">
-                <p id="brief">I love to create fun stuff!
-                    Lorem dim sum Stir fried radish cake Steamed Bun with Butter Cream hot raw fish slices porridge traditional steamed glutinous rice with zhu hao sauce crispy yam puff crispy dragon roll honeydew puree with sago deep fried garlicky fish ball.
-                </p>
-            </div>
-        </section>
-
-        <section class="portfolio">
-             <!-- portfolio -->
-             <div id="portfolio">
-                    <!-- portfolio navigator -->
-                    <div id="portfolio-sort">
-                        <a href="">All Projects</a>
-                        <a href="">UI/UX</a>
-                        <a href="">Installation</a>
-                        <a href="">Fun Stuff</a>
-                    </div>
-             </div>
-            
-             <!-- clear avoid float -->
-             <div class="clear"></div>
-             
-             <div class="items-container">
-                <div id="item1" class="items">Item 1</div>
-                <div id="item2" class="items">Item 2</div>
-                <div id="item3" class="items">Item 3</div>
-                <div id="item4" class="items">Item 4</div>
-                <div id="item5" class="items">Item 5</div>
-                <div id="item6" class="items">Item 6</div>
-            </div>
-        </section>
-
-        <div class="clear"></div>
-             
-        <footer>
-
-        </footer>
-
-        
-       
-        
-        
-
-    </body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
+    <script src="Assets/script/three.r92.min.js"></script>
+    <script src="Assets/script/vanta.birds.min.js"></script>
     
-      
+  </head>
+
+  <body>
+    <!-- navigator menu -->
+    <header>
+      <nav class="navbar">
+        <a id="logo" href="index.html">
+          <img src="./Assets/img/logo.png" height="45" width="45" />
+        </a>
+
+        <span
+          class="aboutme"
+          style="font-size: 15px; cursor: pointer;"
+          onclick="openMe()"
+          >About Me</span
+        >
+
+        <div id="myIntro" class="introBlock">
+          <span id="closeIcon" onclick="closeMe()">&times;</span>
+          <span id="text">
+            <div class="json-container"></div>
+            <br /><br /><br /><br />
+            <p id="aboutme-intro">
+              I am very passionate about making stuff, driven and motivated by
+              possibilities ahead.
+              <br />
+              <br />Pride me in the quality of work and a stickler for the
+              details.
+              <br />
+              <br />
+              Multi-identities: Planner📝/Foodie🍜/Batmaniac🦇
+            </p>
+            <br />
+            <br />
+            <a href="Assets/Kennis Keying Chen_Resume.pdf" target="_blank"
+              ><button id="resume-button">RESUME</button></a
+            >
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="homepage">
+      <div id="name">
+        <!-- I wanna make ps.j5 for it, it would has sound & change color when clicked -->
+        <p id="hi">Hey, I'm Kennis!</p>
+      </div>
+
+      <div id="profile">
+        <br /><br />
+        <p id="brief">
+          NY based multidisciplinary designer who could translate concepts
+          <br />into designs and develop designs through various methods.
+        </p>
+      </div>
+
+      <!-- credit: https://github.com/tengbao/vanta/tree/master/dist -->
+      <div id="vantajs">
+        <script>
+          VANTA.BIRDS({
+            el: "#vantajs",
+            backgroundColor: 0x0,
+            color1: 0xb400ff,
+            color2: 0xff77,
+            colorMode: "lerpGradient",
+            birdSize: 1,
+            wingSpan: 30.0,
+            speedLimit: 5.0,
+            separation: 20,
+            alignment: 20,
+            cohesion: 20,
+            quantity: 5.0
+          });
+        </script>
+      </div>
+    </section>
+
+    <section>
+      <!-- clear avoid float -->
+      <div class="clear"></div>
+
+      <div class="items-container">
+        <a class="items" href="./Assets/html/project1.html" target="_blank">
+          <li class="box-info">
+              <p class="title">INSTALLATION</p>
+              <p class="subtitle">Interaction with Stangers</p>
+          </li>
+        </a>
+
+        <a class="items" href="google.com" target="_blank">
+          <li class="box-info">
+              <p class="title">AR CAMERA</p>
+              <p class="subtitle">Shaped-Glasses</p>
+            </li>
+        </a>
+
+        <a class="items" href="google.com" target="_blank">
+          <li class="box-info">
+              <p class="title">Project3</p>
+              <p class="subtitle">Project name3</p>
+            </li>
+          </a>
+
+        <a class="items" href="google.com" target="_blank">
+            <li class="box-info">
+                <p class="title">Project4</p>
+                <p class="subtitle">Project name4</p>
+              </li>
+          </a>
+
+        <a class="items" href="google.com" target="_blank">
+            <li class="box-info">
+                  <p class="title">Project5</p>
+                  <p class="subtitle">Project name5</p>
+              </li>
+          </a>
+
+          <a class="items" href="google.com" target="_blank">
+              <li class="box-info">
+                    <p class="title">Project6</p>
+                    <p class="subtitle">Project name6</p>
+                </li>
+            </a>
 
 
+
+        
+      </div>
+    </section>
+
+    <div class="clear"></div>
+
+    <footer>
+        <!-- //reference: http://architkaushik.com -->
+            <div id="footerline">
+                    <br>
+                    <br>
+                        <div class="chatbots">
+                            My chatbots are away on a sabatical, please write
+                            to me to get in touch!
+                            <br>
+                            <br>
+                                <div class="clipboard">
+                                   <i id="select-this"><a href="mailto:chenk622@newschool.edu?subject=Hello!">chenk622@newschool.edu</a></i>  
+                                   <p>Email Me</p>
+                  
+                               </div>
+                            <!-- <br> -->
+                            <p class="copyrights">&copy 2019 Kennis Keying Chen. All Rights Reserved.</p>               
+                    </div> 
+    </footer>
+  </body>
 </html>
